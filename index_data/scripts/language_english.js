@@ -130,7 +130,6 @@ function englishLanguage() {
   document.getElementById("confirmStarlLang").innerHTML = "Сonfirm";
   document.getElementById("removeDefLang0").innerHTML = "Remove Default Language";
   document.getElementById("removeDefLang1").innerHTML = "Remove Default Language";
-
   document.getElementById("confirmStarlLang").style.display = "block";
   document.getElementById("removeDefLang0").style.display = "block";
 // directions
@@ -151,6 +150,11 @@ function englishLanguage() {
   document.getElementById("subService10Lang").classList.remove("other-align");
   document.getElementById("subService11Lang").classList.remove("other-align");
 
+  if(navigator.userAgent.match(/mobile/i)) {
+    document.getElementById("dblLangToClose").innerHTML = "Double press on anywhere for close";
+  }else{
+    document.getElementById("dblLangToClose").innerHTML = "Double click on anywhere for close";
+  };
   if(localStorage.getItem("theme") == "dark"){
     document.getElementById("tmText").innerHTML = "Dark";
   }else

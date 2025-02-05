@@ -151,6 +151,11 @@ function russianLanguage() {
   document.getElementById("subService10Lang").classList.remove("other-align");
   document.getElementById("subService11Lang").classList.remove("other-align");
 
+  if(navigator.userAgent.match(/mobile/i)) {
+    document.getElementById("dblLangToClose").innerHTML = "Дважды коснитесь в любом месте, чтобы закрыть";
+  }else{
+    document.getElementById("dblLangToClose").innerHTML = "Дважды нажмите в любом месте, чтобы закрыть";
+  };
   if(localStorage.getItem("theme") == "dark"){
     document.getElementById("tmText").innerHTML = "Темный";
   }else

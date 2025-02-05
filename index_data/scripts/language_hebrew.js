@@ -151,6 +151,11 @@ function hebrewLanguage() {
   document.getElementById("subService10Lang").classList.add("other-align");
   document.getElementById("subService11Lang").classList.add("other-align");
 
+  if(navigator.userAgent.match(/mobile/i)) {
+    document.getElementById("dblLangToClose").innerHTML = "גע פעמיים בכל מקום לסגירה";
+  }else{
+    document.getElementById("dblLangToClose").innerHTML = "לחץ פעמיים בכל מקום לסגירה";
+  };
   if(localStorage.getItem("theme") == "dark"){
     document.getElementById("tmText").innerHTML = "כהה";
   }else
