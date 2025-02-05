@@ -248,6 +248,8 @@
   </div>
   <div id="autoModal" class="modal">
     <div class="modal-content auto-close" id="modalcontentaut">
+      <div id="dblLangToClose" class="transparent-text">...</div>
+      <hr>
       <div class="category" id="instructionLang"></div>
       <hr class="hr">
       <div class="auto-right" id="baseAutoRight">
@@ -314,10 +316,13 @@
         <span>Is this your first time using Storage Player?</span>
         <br>
         <span>?"האם זו הפעם הראשונה שאתה משתמש ב"נגן אחסון</span>
+        <br>
+        <span>Вы впервые используете Проигрыватель памяти?</span>
       </div>
       <br>
       <button onclick="document.getElementById('enLang').click();" class="button">Will you choose to use the <a>English</a> language?</button>
       <button onclick="document.getElementById('heLang').click();"  class="button langSelectBtn">האם תבחרו להשתמש בשפה <a>העברית</a>?</button><br>
+      <button onclick="document.getElementById('ruLang').click();" class="button">Выберете ли вы использовать <a>Русский</a> язык?</button>
       <button id="removeDefLang0" class="button" onclick="locationReloadLang();"></button>
       <button class="button" id="confirmStarlLang" onclick="confirmLang();">----------</button>
       <br>
@@ -325,6 +330,8 @@
         <span>You can change the language in the menu.</span>
         <br>
         <span>.ניתן לשנות את השפה בתפריט</span>
+        <br>
+        <span>Вы можете изменить язык в меню.</span>
       </div>
       <br>
     </div>
