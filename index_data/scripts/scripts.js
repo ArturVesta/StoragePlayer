@@ -555,7 +555,7 @@ function gotoFullsinfo() {
 var autmodal = document.getElementById("autoModal");
 var modalcontaut = document.getElementById("modalcontentaut");
 var cbtnaut = document.getElementsByClassName("auto-close")[0];
-cbtnaut.onclick = function() {
+cbtnaut.ondblclick = function() {
   autmodal.style.left = "-100%";
   if(document.getElementById("myNavigator").style.marginLeft) {
     document.body.style.overflowY = "hidden";
