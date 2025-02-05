@@ -39,6 +39,20 @@
 *::-webkit-scrollbar-thumb:hover {
   background-color: var(--thumb-hover-bg);
 }
+#loadContiner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: 0s;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -o-transition: 0s;
+  backdrop-filter: blur(5px);
+  background: var(--opacity-bg);
+}
 .progbar {
   width: auto;
   margin: auto 15px;
@@ -73,26 +87,11 @@
   -o-transition: 0s;
   color: var(--subcolor);
 }
-#loadContiner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  transition: 0s;
-  -webkit-transition: 0s;
-  -moz-transition: 0s;
-  -o-transition: 0s;
-  backdrop-filter: blur(5px);
-  background: var(--opacity-bg);
-}
-#loadtxt {
-  transition: 0s;
-  -webkit-transition: 0s;
-  -moz-transition: 0s;
-  -o-transition: 0s;
-  border-top: solid 2px var(--border);
+#quickinfoLang {
+  position: absolute;
+  bottom: 20px;
+  left: 2.5%;
+  right: 2.5%;
 }
 a {
   text-decoration: none;

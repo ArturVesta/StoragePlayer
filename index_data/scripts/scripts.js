@@ -991,6 +991,7 @@ function protectOn() {
   elementimgview.style.opacity = "0.3";
   document.getElementById("protectbtn").style.display = "block";
   document.getElementById("intmess").style.left = "0px";
+  document.getElementById("protectLang").disabled = true;
   if(localStorage.getItem("lang") == "en") {
     if(navigator.userAgent.match(/mobile/i)) {
       document.getElementById("msgtext").innerHTML = "Double press on ''&#x1F6E1'' for turn off.";
@@ -1025,6 +1026,7 @@ function protectOff() {
   elementmaineyepro.style.opacity = "1";
   elementimgview.style.opacity = "1";
   document.getElementById("protectbtn").style.display = "none";
+  document.getElementById("protectLang").disabled = false;
 };
 // Check if page use cookies
 function checkCookies() {
