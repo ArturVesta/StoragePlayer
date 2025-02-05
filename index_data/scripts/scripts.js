@@ -69,7 +69,7 @@ function checkBrowserCodeName() {
       document.getElementById("dpffi").innerHTML = "&#8595;גע פעמיים למידע על מסך מלא&#8595;";
       document.getElementById("pscl1").innerHTML = "נגיעה כפולה";
     }else
-    if(localStorage.getItem("lang") == "he") {
+    if(localStorage.getItem("lang") == "ru") {
       document.getElementById("imgLeft").src = "index_data/textures/russian/ru3.jpg";
       document.getElementById("imgRight").src = "index_data/textures/russian/ru4.jpg";
       document.getElementById("dpffi").innerHTML = "&#8595;Дважды нажмите для просмотра информации на весь экран&#8595;";
