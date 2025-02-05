@@ -14,6 +14,22 @@
     left: -1000px;
   }
 }
+@keyframes movenaamepage {
+  from {
+    left: 500px;
+  }
+  to {
+    left: -1000px;
+  }
+}
+@-webkit-keyframes movenaamepage {
+  from {
+    left: 500px;
+  }
+  to {
+    left: -1000px;
+  }
+}
 @keyframes loading{
   0%{
     transform: rotate(0deg);
