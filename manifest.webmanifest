@@ -1,0 +1,17 @@
+{
+  "name": "Storage Player",
+  "short_name": "SP",
+  "description": "Brows all files.",
+  "scope": "/StoragePlayer/",
+  "start_url": "/StoragePlayer/",
+  "background_color": "#f5f6fb",
+  "theme_color": "#f5f6fb",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/StoragePlayer/index_data/textures/icon_dark.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

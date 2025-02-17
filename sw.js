@@ -1,0 +1,37 @@
+var GHPATH = '/StoragePlayer';
+var APP_PREFIX = 'gppwa_';
+var VERSION = 'version_00';
+var URLS = [
+  `${GHPATH}/`,
+  `${GHPATH}/index_data`,
+  `${GHPATH}/index_data/scripts`,
+  `${GHPATH}/index_data/style`,
+  `${GHPATH}/index_data/textures`,
+  `${GHPATH}/index_data/scripts/language_english.js`,
+  `${GHPATH}/index_data/scripts/language_hebrew.js`,
+  `${GHPATH}/index_data/scripts/language_russian.js`,
+  `${GHPATH}/index_data/scripts/languages.js`,
+  `${GHPATH}/index_data/scripts/scripts.js`,
+  `${GHPATH}/index_data/scripts/scripts_continue.js`,
+  `${GHPATH}/index_data/style/animations.css`,
+  `${GHPATH}/index_data/style/roots.css`,
+  `${GHPATH}/index_data/style/styles.css`,
+  `${GHPATH}/index_data/style/styles_max_500.css`,
+  `${GHPATH}/index_data/english`,
+  `${GHPATH}/index_data/hebrew`,
+  `${GHPATH}/index_data/russian`,
+  `${GHPATH}/index_data/textures/icon_dark.png`,
+  `${GHPATH}/index_data/textures/icon_light.png`,
+  `${GHPATH}/index_data/english/en1.png`,
+  `${GHPATH}/index_data/english/en2.png`,
+  `${GHPATH}/index_data/english/en3.png`,
+  `${GHPATH}/index_data/english/en4.png`,
+  `${GHPATH}/index_data/hebrew/he1.png`,
+  `${GHPATH}/index_data/hebrew/he2.png`,
+  `${GHPATH}/index_data/hebrew/he3.png`,
+  `${GHPATH}/index_data/hebrew/he4.png`,
+  `${GHPATH}/index_data/russian/ru1.png`,
+  `${GHPATH}/index_data/russian/ru2.png`,
+  `${GHPATH}/index_data/russian/ru3.png`,
+  `${GHPATH}/index_data/russian/ru4.png`
+]

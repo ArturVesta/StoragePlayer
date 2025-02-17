@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="index_data/style/styles.css">
     <link rel="stylesheet" href="index_data/style/styles_max_500.css">
     <link rel="stylesheet" href="index_data/style/animations.css">
+    <link rel="canonical" href="https://arturvesta.github.io/StoragePlayer/">
+    <link rel="manifest" href="/StoragePlayer/manifest.webmanifest">
     <script>
-      var version = "5.3.3";
-      var datatime = "20/01/2025";
-      window.onscroll = function() {
-        headerFunction();
-        scrollIndicator();
-      };
+      var version = "5.3.4";
+      var datatime = "14/02/2025";
     </script>
   </head>
   <body id="body">
@@ -321,8 +319,8 @@
       </div>
       <br>
       <button onclick="document.getElementById('enLang').click();" class="button">Will you choose to use the <a>English</a> language?</button>
-      <button onclick="document.getElementById('heLang').click();"  class="button langSelectBtn">האם תבחרו להשתמש בשפה <a>העברית</a>?</button><br>
-      <button onclick="document.getElementById('ruLang').click();" class="button">Выберете ли вы использовать <a>Русский</a> язык?</button>
+      <button onclick="document.getElementById('heLang').click();"  class="button langSelectBtn">האם תבחרו להשתמש בשפה <a>העברית</a>?</button>
+      <button onclick="document.getElementById('ruLang').click();" class="button">Выберете ли вы использовать <a>Русский</a> язык?</button><br>
       <button id="removeDefLang0" class="button" onclick="locationReloadLang();"></button>
       <button class="button" id="confirmStarlLang" onclick="confirmLang();">----------</button>
       <br>
@@ -483,6 +481,15 @@
   window.oncontextmenu = function() {
     return false;
   };
+  window.onscroll = function() {
+    headerFunction();
+    scrollIndicator();
+  };
+</script>
+<script>
+  if(navigator.serviceWorker) {
+    navigator.serviceWorker.register('/StoragePlayer/sw.js',{scope: '/StoragePlayer/'})
+  }
 </script>
 </body>
 </html>
