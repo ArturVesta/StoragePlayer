@@ -1,11 +1,9 @@
 {
   "name": "Storage Player",
-  "short_name": "SP",
+  "short_name": "Storage Player",
   "description": "Brows all files.",
   "scope": "/StoragePlayer/",
   "start_url": "/StoragePlayer/",
-  "background_color": "#f5f6fb",
-  "theme_color": "#f5f6fb",
   "display": "standalone",
   "icons": [
     {
