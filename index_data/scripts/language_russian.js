@@ -130,6 +130,7 @@ function russianLanguage() {
   document.getElementById("confirmStarlLang").innerHTML = "Подтвердить";
   document.getElementById("removeDefLang0").innerHTML = "Удалить язык по умолчанию";
   document.getElementById("removeDefLang1").innerHTML = "Удалить язык по умолчанию";
+  document.getElementById("installButton").innerHTML = "Установить ''Проигрыватель памяти''";
 
   document.getElementById("confirmStarlLang").style.display = "block";
   document.getElementById("removeDefLang0").style.display = "block";
@@ -143,6 +144,7 @@ function russianLanguage() {
   document.getElementById("subService10Lang").classList.remove("other-direction");
   document.getElementById("subService11Lang").classList.remove("other-direction");
   document.getElementById("msgtext").classList.remove("other-direction");
+  document.getElementById("installButton").classList.remove("other-direction");
   
 // text-aligns
   document.getElementById("infobtn").style.textAlign = "left";

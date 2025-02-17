@@ -328,16 +328,23 @@ function CheckImgFile(s) {
   if (ValidExtensions.lastIndexOf(FileExtension)<0) {
     return previewFiles(s);
   } else {
-  if(localStorage.getItem("lang") == "en") {
-    alert("Invalid format of file selected");
-  }else
-  if(localStorage.getItem("lang") == "he") {
-    alert("פורמט לא חוקי של הקובץ שנבחר");
-  }else
-  if(localStorage.getItem("lang") == "ru") {
-    alert("Неверный формат выбранного файла");
-  }
-  return false;
+    document.getElementById("intmess").style.left = "0px";
+    if(localStorage.getItem("lang") == "en") {
+      document.getElementById("msgtext").innerHTML = "Invalid format of file selected";
+    }else
+    if(localStorage.getItem("lang") == "he") {
+      document.getElementById("msgtext").innerHTML = "פורמט לא חוקי של הקובץ שנבחר";
+    }else
+    if(localStorage.getItem("lang") == "ru") {
+      document.getElementById("msgtext").innerHTML = "Неверный формат выбранного файла";
+    }
+    setTimeout(() => {
+      document.getElementById("intmess").style.left = "-100%";
+      setTimeout(() => {
+        document.getElementById("msgtext").innerHTML = "";
+      },400);
+    },3000);
+    return false;
   }
 };
 // Upload audio file to "Audio Player"
@@ -462,15 +469,22 @@ function CheckDocFile(s) {
   var FileExtension=s.value;
   FileExtension=FileExtension.substring(FileExtension.lastIndexOf('.'));
   if (ValidExtensions.lastIndexOf(FileExtension)<0) {
+    document.getElementById("intmess").style.left = "0px";
     if(localStorage.getItem("lang") == "en") {
-      alert("Invalid format of file selected");
+      document.getElementById("msgtext").innerHTML = "Invalid format of file selected";
     }else
     if(localStorage.getItem("lang") == "he") {
-      alert("פורמט לא חוקי של הקובץ שנבחר");
+      document.getElementById("msgtext").innerHTML = "פורמט לא חוקי של הקובץ שנבחר";
     }else
     if(localStorage.getItem("lang") == "ru") {
-      alert("Неверный формат выбранного файла");
+      document.getElementById("msgtext").innerHTML = "Неверный формат выбранного файла";
     }
+    setTimeout(() => {
+      document.getElementById("intmess").style.left = "-100%";
+      setTimeout(() => {
+        document.getElementById("msgtext").innerHTML = "";
+      },400);
+    },3000);
     return false;
   } else {
     return previewFilesdoc(s);
@@ -1081,6 +1095,7 @@ const myListTipsEn = [
   "You can remove ''One Use Mode'' by press back on your device's navigation bar.",
   "In instructions you will see links to lists of formats can be able in any players.",
   "Download ''<a class='a' href='https://play.google.com/store/apps/details?id=rk.android.app.shortcutmaker'>Shortcut Maker</a>'' from Google Play, For create shortcut on launcher.",
+  "You can install site from menu via browser.",
   "Weak devices will lag.",
   "Language translations may not be 100% accurate.",
   "If ''One Use Mode'' is used, the ''Close'' button will not be able to close the page.",
@@ -1096,6 +1111,7 @@ const myListTipsHe = [
   "אתה יכול להסיר את ''מצב שימוש אחד'' על ידי לחיצה לאחור בסרגל הניווט של המכשיר שלך.",
   "בהוראות תראה קישורים לרשימות של פורמטים שיכולים להיות בכל נגן.",
   "הורד ''<a class='a' href='https://play.google.com/store/apps/details?id=rk.android.app.shortcutmaker'>יוצר קיצורים</a>'' מGoogle Play, ליצירת קיצור דרך במפעיל.",
+  "אתה יכול להתקין את האתר מהתפריט דרך הדפדפן.",
   "מכשירים חלשים יאחרו.",
   "ייתכן שתרגומי שפות לא יהיו מדויקים ב-100%.",
   "אם ''מצב שימוש אחד'' שומש, הלחצן ''סגור'' לא יוכל לסגור את הדף.",
@@ -1111,6 +1127,7 @@ const myListTipsRu = [
   "Вы можете удалить ''Режим одноразового использования'' нажав кнопку «Назад» на панели навигации вашего устройства.",
   "В инструкции вы увидите ссылки на списки форматов, которые могут быть доступны в любых плеерах..",
   "Загрузите '<a class='a' href='https://play.google.com/store/apps/details?id=rk.android.app.shortcutmaker'>Создатель ярлыков</a>' из Google Play, для создания ярлыка на панели запуска.",
+  "Установить сайт можно из меню через браузер.",
   "Слабые устройства будут отставать.",
   "Переводы на другие языки могут быть неточными на 100%.",
   "Если 'Режим одноразового использования' был использован, то тагда кнопка 'Закрыть' не сможет закрыть страницу по неизвестной причине.",

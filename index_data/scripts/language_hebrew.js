@@ -130,6 +130,7 @@ function hebrewLanguage() {
   document.getElementById("confirmStarlLang").innerHTML = "אישור";
   document.getElementById("removeDefLang0").innerHTML = "הסר שפת ברירת מחדל";
   document.getElementById("removeDefLang1").innerHTML = "הסר שפת ברירת מחדל";
+  document.getElementById("installButton").innerHTML = "התקן את ''נגן אחסון''";
 
   document.getElementById("confirmStarlLang").style.display = "block";
   document.getElementById("removeDefLang0").style.display = "block";
@@ -143,6 +144,7 @@ function hebrewLanguage() {
   document.getElementById("subService10Lang").classList.add("other-direction");
   document.getElementById("subService11Lang").classList.add("other-direction");
   document.getElementById("msgtext").classList.add("other-direction");
+  document.getElementById("installButton").classList.add("other-direction");
   
 // text-aligns
   document.getElementById("infobtn").style.textAlign = "right";
