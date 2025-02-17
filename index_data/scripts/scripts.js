@@ -724,9 +724,7 @@ navigator.getBattery().then(function (battery) {
     editLevelInfo();
   }
   showAllBatteryInfo();
-  battery.addEventListener
-  ('chargingchange',
-    function () {
+  battery.addEventListener('chargingchange', function () {
     editChargeInfo();
   });
   function editChargeInfo() {
@@ -744,10 +742,10 @@ navigator.getBattery().then(function (battery) {
   battery.addEventListener('levelchange', function () {
   editLevelInfo();
   });
-    battery.addEventListener('chargingchange', function () {
+  battery.addEventListener('chargingchange', function () {
     editChargeInfo();
   });
-    battery.addEventListener('levelchange', function () {
+  battery.addEventListener('levelchange', function () {
     editLevelInfo();
   });
   function editLevelInfo() {
@@ -955,31 +953,31 @@ function topFunction() {
 };
 // Links to external pages or apps
 function linkLoaderWhatsapp() {
-  window.location.href="https://api.whatsapp.com/send?phone=972537929234&text=Hello there!";
+  window.open("https://api.whatsapp.com/send?phone=972537929234&text=Hello there!",target="_blank");
 };
 function linkLoaderMail() {
-  window.location.href="mailto:meirfons1@gmail.com";
+  window.open("mailto:meirfons1@gmail.com",target="_blank");
 };
 function linkLoaderCall() {
-  window.location.href="tel:0537929234";
+  window.open("tel:0537929234",target="_blank");
 };
 function linkLoaderMessage() {
-  window.location.href="sms:0537929234?body=Hello there!";
+  window.open("sms:0537929234?body=Hello there!",target="_blank");
 };
 function linkLoaderTelegram() {
-  window.location.href="https://t.me/arthur_vesta_mt";
+  window.open("https://t.me/arthur_vesta_mt",target="_blank");
 };
 function videolistPlayer() {
-  window.location.href = "https://en.m.wikipedia.org/wiki/Video_file_format";
+  window.open("https://en.m.wikipedia.org/wiki/Video_file_format",target="_blank");
 };
 function imagelistPlayer() {
-  window.location.href = "https://en.m.wikipedia.org/wiki/Image_file_format";
+  window.open("https://en.m.wikipedia.org/wiki/Image_file_format",target="_blank");
 };
 function audiolistPlayer() {
-  window.location.href = "https://en.m.wikipedia.org/wiki/Audio_file_format";
+  window.open("https://en.m.wikipedia.org/wiki/Audio_file_format",target="_blank");
 };
 function docslistPlayer() {
-  window.location.href = "https://www.adobe.com/uk/acrobat/resources/document-files/text-files.html";
+  window.open("https://www.adobe.com/uk/acrobat/resources/document-files/text-files.html",target="_blank");
 };
 // Protector of bluring players
 var elementmaineyepro = document.getElementById("main");
@@ -1210,6 +1208,7 @@ function scrollIndicator() {
 // Dark / Light Themes
 function detectColorScheme(){
 var theme="light";
+document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f5f6fb');
 document.getElementById("tmText").innerHTML = "Bright";
   if(localStorage.getItem("theme")){
     if(localStorage.getItem("theme") == "dark"){
@@ -1222,6 +1221,7 @@ document.getElementById("tmText").innerHTML = "Bright";
   }
   if (theme=="dark") {
     document.documentElement.setAttribute("data-theme", "dark");
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0c0f1d');
   }
 };
 detectColorScheme();
@@ -1240,6 +1240,7 @@ function switchTheme() {
     if(localStorage.getItem("lang") == "ru") {
       document.getElementById("tmText").innerHTML = "Темный";
     }
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0c0f1d');
   } else {
     localStorage.setItem('theme', 'light');
     document.documentElement.setAttribute('data-theme', 'light');
@@ -1253,6 +1254,7 @@ function switchTheme() {
     if(localStorage.getItem("lang") == "ru") {
       document.getElementById("tmText").innerHTML = "Светлый";
     }
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f5f6fb');
   }
   loadIcon();
 };
@@ -1268,6 +1270,7 @@ if (document.documentElement.getAttribute("data-theme") == "dark"){
   if(localStorage.getItem("lang") == "ru") {
     document.getElementById("tmText").innerHTML = "Темный";
   }
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0c0f1d');
 };
 // Share system
 const shareDataEn = {
