@@ -133,6 +133,7 @@ function englishLanguage() {
   document.getElementById("confirmStarlLang").style.display = "block";
   document.getElementById("removeDefLang0").style.display = "block";
   document.getElementById("installButton").innerHTML = "Install ''Storage Player''";
+  document.getElementById("defLang").innerHTML = "Default Theme";
 // directions
   document.getElementById("infobtn").style.direction = "ltr";
   document.getElementById("subTextLang").style.direction = "ltr";

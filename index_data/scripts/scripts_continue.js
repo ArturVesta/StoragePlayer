@@ -170,3 +170,60 @@ const installButton = document.getElementById('installButton'); // Replace with 
 if (installButton) {
   installButton.addEventListener('click', installApp);
 };
+function activeSelectThemes() {
+  document.getElementById("selectThemes").classList.toggle("show");
+};
+window.onclick = function(event) {
+  if (!event.target.matches('.selectthemebtn')) {
+    var dropdowns = document.getElementsByClassName("select-themes-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }else
+  if (!event.target.matches('.selectbtn')) {
+    var dropdowns = document.getElementsByClassName("select-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+};
+function themeSystemChangesDefault() {
+  localStorage.setItem("mainTheme", "default");
+  var link = document.getElementById("rootHendler");
+  link.setAttribute("href", "index_data/themes/default/roots.css");
+  if(localStorage.getItem("lang") === "en") {
+    document.getElementById("themeSelected").innerHTML = "Default Theme";
+  }else
+  if(localStorage.getItem("lang") === "he") {
+    document.getElementById("themeSelected").innerHTML = "ערכת נושא ברירת מחדל";
+  }else
+  if(localStorage.getItem("lang") === "ru") {
+    document.getElementById("themeSelected").innerHTML = "По Умолчаная Тема";
+  }
+};
+function themeSystemChangesHoyolab() {
+  localStorage.setItem("mainTheme", "hoyolab");
+  var link = document.getElementById("rootHendler");
+  link.setAttribute("href", "index_data/themes/hoyolab/roots.css");
+  document.getElementById("themeSelected").innerHTML = "HoYoLab Theme";
+};
+function loadTheme() {
+  if(localStorage.getItem("mainTheme") === "default") {
+    return themeSystemChangesDefault();
+  }else
+  if(localStorage.getItem("mainTheme") === "hoyolab") {
+    return themeSystemChangesHoyolab();
+  }else{
+    localStorage.setItem("mainTheme", "default");
+    console.log("Can't load theme at unknown error in script...");
+    console.log("Theme auto selected to Default value.");
+  }
+}

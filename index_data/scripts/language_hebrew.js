@@ -131,6 +131,7 @@ function hebrewLanguage() {
   document.getElementById("removeDefLang0").innerHTML = "הסר שפת ברירת מחדל";
   document.getElementById("removeDefLang1").innerHTML = "הסר שפת ברירת מחדל";
   document.getElementById("installButton").innerHTML = "התקן את ''נגן אחסון''";
+  document.getElementById("defLang").innerHTML = "ערכת נושא ברירת מחדל";
 
   document.getElementById("confirmStarlLang").style.display = "block";
   document.getElementById("removeDefLang0").style.display = "block";

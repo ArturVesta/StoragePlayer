@@ -1,18 +1,6 @@
 function activeSelect() {
   document.getElementById("selectOptions").classList.toggle("show");
 }
-window.onclick = function(event) {
-  if (!event.target.matches('.selectbtn')) {
-    var dropdowns = document.getElementsByClassName("select-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-};
 function langCheck() {
   if(localStorage.getItem("lang") == "en") {
     document.getElementById("enLang").click();

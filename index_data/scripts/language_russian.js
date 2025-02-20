@@ -131,6 +131,7 @@ function russianLanguage() {
   document.getElementById("removeDefLang0").innerHTML = "Удалить язык по умолчанию";
   document.getElementById("removeDefLang1").innerHTML = "Удалить язык по умолчанию";
   document.getElementById("installButton").innerHTML = "Установить ''Проигрыватель памяти''";
+  document.getElementById("defLang").innerHTML = "По Умолчаная Тема";
 
   document.getElementById("confirmStarlLang").style.display = "block";
   document.getElementById("removeDefLang0").style.display = "block";

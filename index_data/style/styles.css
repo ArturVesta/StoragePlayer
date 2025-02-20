@@ -131,6 +131,7 @@ input[type=file] {
 .sub-input-type-file {
   font-weight: bold;
   margin: 0;
+  padding: 10px 0;
   width: 100%;
   cursor: pointer;
   border-radius: 10px;
@@ -836,6 +837,7 @@ ul {
 }
 .linksrch {
   padding: 5px;
+  cursor: text;
 }
 .battery-progbar {
   height: 100%;
@@ -905,7 +907,8 @@ emoji {
 #firstLangModal {
   z-index: 5;
 }
-.select {
+.select,
+.select-themes {
   position: relative;
   display: inline-block;
   width: calc(95% - 4px);
@@ -914,7 +917,8 @@ emoji {
   overflow: auto;
   border: solid 2px var(--border);
 }
-.selectbtn {
+.selectbtn,
+.selectthemebtn {
   background-color: var(--background);
   color: var(--color);
   padding: 16px;
@@ -924,7 +928,8 @@ emoji {
   z-index: -1;
   cursor: pointer;
 }
-.select-content {
+.select-content,
+.select-themes-content {
   width: 100%;
   height: auto;
   min-height: 0px;
@@ -936,10 +941,12 @@ emoji {
   background: var(--background);
   border: solid 0px var(--border);
 }
-.select-content::-webkit-scrollbar {
+.select-content::-webkit-scrollbar,
+.select-themes-content::-webkit-scrollbar {
   display: none !important;
 }
-.select-content a {
+.select-content a,
+.select-themes-content a {
   color: var(--color);
   border-top: solid 1px var(--border);
   border-bottom: solid 1px var(--border);
@@ -947,14 +954,17 @@ emoji {
   text-decoration: none;
   display: block;
 }
-.select-content .last-a {
+.select-content .last-a,
+.select-themes-content .last-a {
   border-radius: 0 0 8.5px 8.5px;
 }
-.select-content a:hover {
+.select-content a:hover,
+.select-themes-content a:hover {
   color: var(--subcolor);
   background: var(--border);
 }
-.select:hover .selectbtn {
+.select:hover .selectbtn,
+.select-themes:hover .selectthemebtn {
   background: var(--border);
   color: var(--subcolor);
 }
