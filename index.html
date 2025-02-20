@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#f5f6fb">
     <meta name="background_color" content="#f5f6fb">
     <title>Loading...</title>
-    <link rel="stylesheet" href="index_data/style/roots.css">
+    <link rel="stylesheet" id="rootHendler">
     <link rel="stylesheet" href="index_data/style/styles.css">
     <link rel="stylesheet" href="index_data/style/styles_max_500.css">
     <link rel="stylesheet" href="index_data/style/animations.css">
@@ -108,6 +108,13 @@
       </div>
     </div>
     <button onclick="locationReloadLang();" id="removeDefLang1" class="button last-a">...</button>
+    <div class="select-themes">
+      <button class="selectthemebtn" id="themeSelected" onclick="activeSelectThemes();">...</button>
+      <div id="selectThemes" class="select-themes-content">
+        <a href="javascript:themeSystemChangesDefault();" id="defLang">...</a>
+        <a href="javascript:themeSystemChangesHoyolab();" id="hylLang">HoYoLab Theme</a>
+      </div>
+    </div>
     <hr class="hr">
     <div class="category" id="moreLang">...</div>
     <button class="button" id="installButton">...</button>
@@ -474,6 +481,7 @@
     displayAutoModal();
     langCheck();
     firstLanguage();
+    loadTheme();
   };
   window.ononline = function() {
     checkConnection();
