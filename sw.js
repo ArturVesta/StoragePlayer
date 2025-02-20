@@ -1,6 +1,6 @@
 var GHPATH = '/StoragePlayer';
 var APP_PREFIX = 'gppwa_';
-var VERSION = 'version_03';
+var VERSION = 'version_04';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
@@ -15,7 +15,6 @@ var URLS = [
   `${GHPATH}/index_data/scripts/scripts.js`,
   `${GHPATH}/index_data/scripts/scripts_continue.js`,
   `${GHPATH}/index_data/style/animations.css`,
-  `${GHPATH}/index_data/style/roots.css`,
   `${GHPATH}/index_data/style/styles.css`,
   `${GHPATH}/index_data/style/styles_max_500.css`,
   `${GHPATH}/index_data/english`,
@@ -34,7 +33,12 @@ var URLS = [
   `${GHPATH}/index_data/russian/ru1.png`,
   `${GHPATH}/index_data/russian/ru2.png`,
   `${GHPATH}/index_data/russian/ru3.png`,
-  `${GHPATH}/index_data/russian/ru4.png`
+  `${GHPATH}/index_data/russian/ru4.png`,
+  `${GHPATH}/index_data/themes`,
+  `${GHPATH}/index_data/themes/default`,
+  `${GHPATH}/index_data/themes/hoyolab`,
+  `${GHPATH}/index_data/themes/default/roots.css`,
+  `${GHPATH}/index_data/themes/hoyolab/roots.css`
 ];
 var CACHE_NAME = 'storageplayer-v1';
 var CacheURLS = [
@@ -51,7 +55,6 @@ var CacheURLS = [
   `${GHPATH}/index_data/scripts/scripts.js`,
   `${GHPATH}/index_data/scripts/scripts_continue.js`,
   `${GHPATH}/index_data/style/animations.css`,
-  `${GHPATH}/index_data/style/roots.css`,
   `${GHPATH}/index_data/style/styles.css`,
   `${GHPATH}/index_data/style/styles_max_500.css`,
   `${GHPATH}/index_data/english`,
@@ -70,7 +73,12 @@ var CacheURLS = [
   `${GHPATH}/index_data/russian/ru1.png`,
   `${GHPATH}/index_data/russian/ru2.png`,
   `${GHPATH}/index_data/russian/ru3.png`,
-  `${GHPATH}/index_data/russian/ru4.png`
+  `${GHPATH}/index_data/russian/ru4.png`,
+  `${GHPATH}/index_data/themes`,
+  `${GHPATH}/index_data/themes/default`,
+  `${GHPATH}/index_data/themes/hoyolab`,
+  `${GHPATH}/index_data/themes/default/roots.css`,
+  `${GHPATH}/index_data/themes/hoyolab/roots.css`
 ];
 self.addEventListener('install', event => {
   event.waitUntil(
