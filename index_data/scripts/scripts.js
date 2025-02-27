@@ -1071,10 +1071,17 @@ function checkConnection() {
     document.getElementById("body").value = "ONLINE";
     document.getElementById("internetdisconnected").style.display = "none";
     document.getElementById("internetconnected").style.display = "block";
+    document.getElementById("linkOpen").style.display = "block";
   } else {
     document.getElementById("body").value = "OFFLINE";
     document.getElementById("internetdisconnected").style.display = "block";
     document.getElementById("internetconnected").style.display = "none";
+    document.getElementById("linkOpen").style.display = "none";
+    if(document.getElementById("e").style.display === "block") {
+      document.getElementById("videoOpen").click();
+    }else{
+      return false;
+    }
   }
 };
 // Close message whene clicked

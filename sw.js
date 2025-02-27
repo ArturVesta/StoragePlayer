@@ -1,6 +1,6 @@
 var GHPATH = '/StoragePlayer';
 var APP_PREFIX = 'gppwa_';
-var VERSION = 'version_04';
+var VERSION = 'version_05';
 var URLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
@@ -40,7 +40,7 @@ var URLS = [
   `${GHPATH}/index_data/themes/default/roots.css`,
   `${GHPATH}/index_data/themes/hoyolab/roots.css`
 ];
-var CACHE_NAME = 'storageplayer-v1';
+var CACHE_NAME = 'storageplayer-v5';
 var CacheURLS = [
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
