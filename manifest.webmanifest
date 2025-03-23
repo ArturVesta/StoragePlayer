@@ -4,7 +4,7 @@
   "description": "Brows all files.",
   "scope": "/StoragePlayer/",
   "start_url": "/StoragePlayer/",
-  "display": "standalone",
+  "display": "fullscreen",
   "icons": [
     {
       "src": "/StoragePlayer/index_data/textures/icon_dark.png",
