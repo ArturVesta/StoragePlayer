@@ -41,11 +41,11 @@ document.onkeydown = function (event) {
 // Install App: Gen by: Gemini
 function installApp() {
   let deferredPrompt; // Store the deferred prompt
-  if (navigator.standalone) {
-    // Already installed (iOS) or running as a standalone app
+  if (navigator.fullscreen) {
+    // Already installed (iOS) or running as a fullscreen app
     document.getElementById("intmess").style.left = "0px";
     if(localStorage.getItem("lang") == "en") {
-      document.getElementById("msgtext").innerHTML = "App is already installed or running in standalone mode.";
+      document.getElementById("msgtext").innerHTML = "App is already installed or running in fullscreen mode.";
     }else
     if(localStorage.getItem("lang") == "he") {
       document.getElementById("msgtext").innerHTML = "האפליקציה כבר מותקנת או פועלת במצב עצמאי.";
@@ -61,11 +61,11 @@ function installApp() {
     },3000);
     return;
   }
-  if (window.matchMedia('(display-mode: standalone)').matches) {
+  if (window.matchMedia('(display-mode: fullscreen)').matches) {
     // Already installed (Android)
     document.getElementById("intmess").style.left = "0px";
     if(localStorage.getItem("lang") == "en") {
-      document.getElementById("msgtext").innerHTML = "App is already installed or running in standalone mode.";
+      document.getElementById("msgtext").innerHTML = "App is already installed or running in fullscreen mode.";
     }else
     if(localStorage.getItem("lang") == "he") {
       document.getElementById("msgtext").innerHTML = "האפליקציה כבר מותקנת או פועלת במצב עצמאי.";
