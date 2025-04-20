@@ -1,0 +1,50 @@
+@keyframes movenaamepage {
+  from {
+    left: 500px;
+  }
+  to {
+    left: -1000px;
+  }
+}
+@-webkit-keyframes movenaamepage {
+  from {
+    left: 500px;
+  }
+  to {
+    left: -1000px;
+  }
+}
+@keyframes loading{
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(450deg);
+  }
+  50%{
+    transform: rotate(900deg);
+  }
+  75%{
+    transform: rotate(1350deg);
+  }
+  100%{
+    transform: rotate(1800deg);
+  }
+}
+@-webkit-keyframes loading{
+	0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(450deg);
+  }
+  50%{
+    transform: rotate(900deg);
+  }
+  75%{
+    transform: rotate(1350deg);
+  }
+  100%{
+    transform: rotate(1800deg);
+  }
+}
