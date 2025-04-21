@@ -5,18 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta name="theme-color" content="#f5f6fb">
-    <meta name="background_color" content="#f5f6fb">
-    <title>Loading...</title>
+    <title>...</title>
     <link rel="stylesheet" id="rootHendler">
-    <link rel="stylesheet" href="index_data/style/styles.css">
-    <link rel="stylesheet" href="index_data/style/styles_max_500.css">
-    <link rel="stylesheet" href="index_data/style/animations.css">
+    <link rel="stylesheet" id="stylesHendler">
+    <link rel="stylesheet" id="stylesHendler500">
+    <link rel="stylesheet" id="animationsHendler">
+
     <link rel="canonical" href="https://arturvesta.github.io/StoragePlayer/">
-    <link rel="manifest" href="/StoragePlayer/manifest.webmanifest">
-    <script>
-      var version = "5.3.7";
-      var datatime = "27/02/2025";
-    </script>
+    <link rel="manifest" href="" id="manifestTestLoad">
   </head>
   <body id="body">
   <div id="loadContiner">
@@ -26,8 +22,9 @@
       <div id="loadNumber" class="prognum"></div>
       <div id="loadtxt">...</div>
     </div>
-    <div class="loader"></div>
-    <button class="button" onclick="gotoFullsinfo();" id="quickinfoLang">...</button>
+    <button id="loadingContinue" class="button" onclick="continueAfterLoad();">...</button>
+    <div id="errorLogs"></div>
+    <div class="loader" id="loadingAnimation"></div>
   </div>
   <div class="base-space" id="baseSpace">
     <span class="clock" id="vartime">...</span>
@@ -76,12 +73,11 @@
       <button class="tablinks" onclick="openPlayer(event, 'c');" id="audioOpen">...</button>
       <button class="tablinks" onclick="openPlayer(event, 'd');" id="docsOpen">...</button>
       <button class="tablinks" onclick="openPlayer(event, 'e');" id="linkOpen">...</button>
-      <button class="tablinks disabled" onclick="comingSoon();" id="pdfsOpen">Pdfs</button>
     </div>
   </div>
   <div id="myNavigator" class="navigator">
     <div class="category" id="settingsLang"></div>
-    <button class="seting button" onclick="protectOn();" id="protectLang">...</button>
+    <button class="setting button" onclick="protectOn();" id="protectLang">...</button>
     <button class="setting button" onclick="oneModeuse();" id="setoneusetrue">...</button>
     <button class="button toggled-text" onclick="killAnimation();">
       <span id="animationLang"></span>
@@ -107,7 +103,6 @@
         <a href="javascript:russianLanguage();" id="ruLang" class="last-a">Русский</a>
       </div>
     </div>
-    <button onclick="locationReloadLang();" id="removeDefLang1" class="button last-a">...</button>
     <div class="select-themes">
       <button class="selectthemebtn" id="themeSelected" onclick="activeSelectThemes();">...</button>
       <div id="selectThemes" class="select-themes-content">
@@ -115,132 +110,22 @@
         <a href="javascript:themeSystemChangesHoyolab();" id="hylLang">HoYoLab Theme</a>
       </div>
     </div>
+    <div class="button toggled-text" id="devToolsContainer">
+      <span id="adminToolsLang"></span>
+      <input id="administratorTools" type="checkbox">
+      <span class="button tools-comments">
+        <div>Systems</div>
+        Inspactor <span> | </span> [F12] / [CTRL]+[SHIFT]+[I]<br>
+        Context Menu <span> | </span> [Right Mouse] / [CTRL]+[SHIFT]+[F10]<br>
+        ReDownloads <span> | </span> Menu of uploaded files
+      </span>
+    </div>
     <hr class="hr">
     <div class="category" id="moreLang">...</div>
     <button class="button" id="installButton">...</button>
     <button class="button" id="sharing">...</button>
     <button class="button" onclick="locationReload();" id="reloadLang">...</button>
     <button class="button" onclick="questionClosepage();return false;" id="closeLang">...</button>
-    <hr class="hr">
-    <span class="close-modal-btn button" id="xinfobtn" onClick="infoInnorm();">&#10006;</span>
-    <div class="transparent-text">
-      <a id="dpffi">...</a>
-    </div>
-    <button class="information" id="infobtn" onDblClick="infoInfull();" style="padding-right:0;">
-      <div>
-        <span id="pageNameLang"></span>
-        <a id="pageName">...</a>.
-      </div>
-      <div>
-        <span id="pageTitleLang"></span>
-        <a id="pageTitle">...</a>.
-      </div>
-      <div>
-        <span id="pagePackageLang"></span>
-        <a id="pagePackage">...</a>.
-      </div>
-      <div>
-        <span id="packLinkLang"></span>
-        <div class="table-pack-link center-pack-link" id="tablewlh">
-          <div class="monitor-pack-link" id="monitorwlh">
-            <a id="packLink" translate="no">...</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <span id="uidLang"></span>
-        <a id="uid">...</a>
-      </div>
-      <div>
-        <span id="lastTimeLang"></span>
-        <a id="lastTime">...</a>
-      </div>
-      <div>
-        <span id="versionLang"></span>
-        <a id="version">...</a>.
-      </div>
-      <div>
-        <span id="updatedateLang"></span>
-        <a id="updatedate">...</a>.
-      </div>
-      <div>
-        <span id="pageAuthorsLang"></span>
-        <a id="pageAuthors" translate="no">...</a>.
-      </div>
-      <div>
-        <span id="checkcookiesLang"></span>
-        <a id="checkcookies">...</a>.
-      </div>
-      <div>
-        <span id="pageLicenseLang"></span>
-        <a id="pageLicense">...</a>.
-      </div>
-      <div>
-        <span id="interRessLang"></span>
-        <a id="interRess">...</a>.
-      </div>
-      <div>
-        <span id="exterRessLang"></span>
-        <a id="exterRess">...</a>.
-      </div>
-      <div>
-        <span id="exterLinkLang"></span>
-        <a id="exterLink">...</a>.
-      </div>
-      <hr class="hr">
-      <h4 id="descriptLang">...</h4>
-      <div id="descript0Lang">...</div>
-      <div>
-        <strong id="descript1Lang">...</strong>
-      </div>
-      <div>
-        <strong id="descript2Lang">...</strong>
-      </div>
-      <div id="descript3Lang">...</div>
-      <hr class="hr">
-      <h4 id="aboutLang">...</h4>
-      <div id="about0Lang">...</div>
-      <hr class="hr">
-      <h4 id="recomLang">...</h4>
-      <li id="recom0Lang">...</li>
-      <hr class="hr">
-      <h4 id="tipsLang">...</h4>
-      <li id="tips0Lang">...</li>
-      <li id="tips1Lang">...</li>
-      <hr class="hr">
-      <h4 id="wawrsLang">...</h4>
-      <li id="wawrs0Lang">...</li>
-      <li id="wawrs1Lang">...</li>
-      <li id="wawrs2Lang">...</li>
-      <h4 id="wawrs3Lang">...</h4>
-      <li id="wawrs4Lang">...</li>
-      <hr class="hr">
-      <div class="servicer">
-        <span id="service0Lang"></span>
-        <br>
-        <svg style="fill: var(--subcolor);" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" onclick="linkLoaderWhatsapp();">
-          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-        </svg>
-        <svg style="fill: var(--subcolor);" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 193" onclick="linkLoaderMail();">
-          <path d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"></path>
-          <path d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z"></path>
-          <path d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"></path>
-          <path d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z"></path>
-          <path d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z"></path>
-        </svg>
-        <svg style="fill: var(--subcolor);" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16" onclick="linkLoaderCall();">
-          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
-        </svg>
-        <svg style="fill: var(--subcolor);" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16" onclick="linkLoaderMessage();">
-          <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"></path>
-        </svg>
-        <svg style="fill: var(--subcolor);" onclick="linkLoaderTelegram();" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 25" width="30px" height="30px" fill-rule="nonzero" fill="currentColor">
-          <path d="M20.30273,2.98438c-0.28897,0.01257 -0.55415,0.09568 -0.78711,0.1875c-0.21522,0.08476 -0.98809,0.4096 -2.21875,0.92578c-1.23066,0.51618 -2.8614,1.20058 -4.59961,1.93164c-3.47642,1.46212 -7.38303,3.10683 -9.38477,3.94922c-0.06874,0.02864 -0.34791,0.11411 -0.65625,0.34961c-0.30905,0.23605 -0.65234,0.74834 -0.65234,1.30859c0,0.45195 0.22561,0.91225 0.49805,1.17578c0.27243,0.26353 0.54854,0.38674 0.7793,0.47852v-0.00195c0.78003,0.31076 3.10944,1.24288 3.66406,1.46484c0.19673,0.58953 1.04128,3.11337 1.24219,3.74805h-0.00195c0.14201,0.44921 0.28043,0.74196 0.47266,0.98633c0.09611,0.12218 0.21084,0.2329 0.35156,0.32031c0.05399,0.03354 0.11378,0.05955 0.17383,0.08398c0.00837,0.00355 0.01699,0.00443 0.02539,0.00781l-0.02344,-0.00586c0.01741,0.007 0.03304,0.01733 0.05078,0.02344c0.02891,0.00996 0.04896,0.00963 0.08789,0.01758c0.137,0.04215 0.27376,0.07031 0.40039,0.07031c0.54361,0 0.87695,-0.29492 0.87695,-0.29492l0.02149,-0.01563l2.34766,-1.98633l2.875,2.66016c0.05251,0.07415 0.4639,0.63086 1.41602,0.63086c0.56813,0 1.01731,-0.28121 1.30469,-0.57617c0.28738,-0.29496 0.4664,-0.59677 0.54688,-1.00586l0.00195,-0.00195c0.06418,-0.33018 2.81641,-14.15039 2.81641,-14.15039l-0.00586,0.02344c0.08566,-0.38235 0.11095,-0.7521 0.00977,-1.12891c-0.10119,-0.37681 -0.37428,-0.74453 -0.70312,-0.9375c-0.32885,-0.19297 -0.64072,-0.25085 -0.92969,-0.23828zM19.9082,5.17383c-0.10876,0.54603 -2.57419,12.93205 -2.72656,13.70898l-4.15234,-3.8418l-2.80664,2.37305l0.77734,-3.03906c0,0 5.36255,-5.42814 5.68555,-5.74414c0.26,-0.253 0.31445,-0.34169 0.31445,-0.42969c0,-0.117 -0.06022,-0.20117 -0.19922,-0.20117c-0.125,0 -0.29477,0.11978 -0.38477,0.17578c-1.14365,0.713 -6.01473,3.4889 -8.41016,4.85156c-0.14416,-0.0578 -2.30846,-0.92689 -3.47461,-1.39258c2.07426,-0.873 5.62991,-2.36896 8.94141,-3.76172c1.73791,-0.73094 3.36817,-1.41595 4.59766,-1.93164c1.03785,-0.43531 1.57923,-0.6607 1.83789,-0.76758zM17.15234,19.02539h0.00195c-0.00005,0.00023 -0.00185,0.00556 -0.00195,0.00586c0.00127,-0.00646 -0.00095,-0.0008 0,-0.00586z"></path>
-        </svg>
-      </div>
-      <div id="subService00Lang">...</div>
-      <div id="subService01Lang">...</div>
-    </button>
     <div class="transparent-text">- - - - - - - - - - - - - - - - - - - -</div>
     <div class="transparent-text" id="subTextLang">...</div>
     <div class="transparent-text">- - - - - - - - - - - - - - - - - - - -</div>
@@ -331,7 +216,6 @@
       <button onclick="document.getElementById('enLang').click();" class="button">Will you choose to use the <a>English</a> language?</button>
       <button onclick="document.getElementById('heLang').click();"  class="button langSelectBtn">האם תבחרו להשתמש בשפה <a>העברית</a>?</button>
       <button onclick="document.getElementById('ruLang').click();" class="button">Выберете ли вы использовать <a>Русский</a> язык?</button><br>
-      <button id="removeDefLang0" class="button" onclick="locationReloadLang();"></button>
       <button class="button" id="confirmStarlLang" onclick="confirmLang();">----------</button>
       <br>
       <div>
@@ -357,6 +241,7 @@
       <div class="transparent-text" id="vEndSows">...</div>
       <button class="next-player button" onclick="nextTob();" id="next00">...</button>
       <button class="prev-player button" onclick="nextToe();" id="next01">...</button>
+      <button class="prev-player button" onclick="nextTod();" id="next02" style="display:none;">...</button>
     </div>
     <div id="b" class="tab-content imagres">
       <div class="category"><span id="player1Title"></span>
@@ -395,18 +280,24 @@
       <div class="transparent-text" id="dEndSows">...</div>
       <button class="next-player button" onclick="nextToe();" id="next30">...</button>
       <button class="prev-player button" onclick="nextToc();" id="next31">...</button>
+      <button class="next-player button" onclick="nextToa();" id="next32" style="display:none;">...</button>
     </div>
     <div id="e" class="tab-content">
       <div class="category" id="player4Title"></div>
       <div class="category" id="wlLang"></div>
-      <input class="button linksrch" type="search" name="url" id="inputsearchurl" placeholder="example: https://youtube.com/embed/NWz6fl6mK4Q Link of youtube in frame.">
+      <input class="button linksrch" type="search" name="url" id="inputsearchurl" placeholder="example: https://youtube.com/embed/video_id Link of video in youtube.">
       <input class="button" type="submit" name="link" id="inputsubmitlink" onclick="LoadLink(this);startLoading();">
       <hr class="hr">
       <div class="frame-container">
         <div class="loadingcontainer" id="loadingcontainer">
           <div class="loader"></div>
         </div>
-        <iframe class="url-frame" id="embedlink" src="https://youtube.com/embed/NWz6fl6mK4Q" onload="finishLoading();" allowfullscreen></iframe>
+        <iframe class="url-frame" id="embedlink" src="./no_linked.txt" onload="finishLoading();" allowfullscreen></iframe>
+        <script>// QuickAcessScript
+          function finishLoading() {
+            document.getElementById('loadingcontainer').style.display='none';
+          };
+        </script>
       </div>
       <span id="embedLink">...</span>
       <button class="next-player button" onclick="nextToa();" id="next40">...</button>
@@ -414,31 +305,6 @@
     </div>
   </div>
   <div id="footer">
-    <div class="servicer">
-      <span id="service1Lang"></span>
-      <br>
-      <svg style="fill: var(--subcolor);" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" onclick="linkLoaderWhatsapp();">
-        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-      </svg>
-      <svg style="fill: var(--subcolor);" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 193" onclick="linkLoaderMail();">
-        <path d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"></path>
-        <path d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z"></path>
-        <path d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"></path>
-        <path d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z"></path>
-        <path d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z"></path>
-      </svg>
-      <svg style="fill: var(--subcolor);" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16" onclick="linkLoaderCall();">
-        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
-      </svg>
-      <svg style="fill: var(--subcolor);" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16" onclick="linkLoaderMessage();">
-        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"></path>
-      </svg>
-      <svg style="fill: var(--subcolor);" onclick="linkLoaderTelegram();" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25 25" width="30px" height="30px" fill-rule="nonzero" fill="currentColor">
-        <path d="M20.30273,2.98438c-0.28897,0.01257 -0.55415,0.09568 -0.78711,0.1875c-0.21522,0.08476 -0.98809,0.4096 -2.21875,0.92578c-1.23066,0.51618 -2.8614,1.20058 -4.59961,1.93164c-3.47642,1.46212 -7.38303,3.10683 -9.38477,3.94922c-0.06874,0.02864 -0.34791,0.11411 -0.65625,0.34961c-0.30905,0.23605 -0.65234,0.74834 -0.65234,1.30859c0,0.45195 0.22561,0.91225 0.49805,1.17578c0.27243,0.26353 0.54854,0.38674 0.7793,0.47852v-0.00195c0.78003,0.31076 3.10944,1.24288 3.66406,1.46484c0.19673,0.58953 1.04128,3.11337 1.24219,3.74805h-0.00195c0.14201,0.44921 0.28043,0.74196 0.47266,0.98633c0.09611,0.12218 0.21084,0.2329 0.35156,0.32031c0.05399,0.03354 0.11378,0.05955 0.17383,0.08398c0.00837,0.00355 0.01699,0.00443 0.02539,0.00781l-0.02344,-0.00586c0.01741,0.007 0.03304,0.01733 0.05078,0.02344c0.02891,0.00996 0.04896,0.00963 0.08789,0.01758c0.137,0.04215 0.27376,0.07031 0.40039,0.07031c0.54361,0 0.87695,-0.29492 0.87695,-0.29492l0.02149,-0.01563l2.34766,-1.98633l2.875,2.66016c0.05251,0.07415 0.4639,0.63086 1.41602,0.63086c0.56813,0 1.01731,-0.28121 1.30469,-0.57617c0.28738,-0.29496 0.4664,-0.59677 0.54688,-1.00586l0.00195,-0.00195c0.06418,-0.33018 2.81641,-14.15039 2.81641,-14.15039l-0.00586,0.02344c0.08566,-0.38235 0.11095,-0.7521 0.00977,-1.12891c-0.10119,-0.37681 -0.37428,-0.74453 -0.70312,-0.9375c-0.32885,-0.19297 -0.64072,-0.25085 -0.92969,-0.23828zM19.9082,5.17383c-0.10876,0.54603 -2.57419,12.93205 -2.72656,13.70898l-4.15234,-3.8418l-2.80664,2.37305l0.77734,-3.03906c0,0 5.36255,-5.42814 5.68555,-5.74414c0.26,-0.253 0.31445,-0.34169 0.31445,-0.42969c0,-0.117 -0.06022,-0.20117 -0.19922,-0.20117c-0.125,0 -0.29477,0.11978 -0.38477,0.17578c-1.14365,0.713 -6.01473,3.4889 -8.41016,4.85156c-0.14416,-0.0578 -2.30846,-0.92689 -3.47461,-1.39258c2.07426,-0.873 5.62991,-2.36896 8.94141,-3.76172c1.73791,-0.73094 3.36817,-1.41595 4.59766,-1.93164c1.03785,-0.43531 1.57923,-0.6607 1.83789,-0.76758zM17.15234,19.02539h0.00195c-0.00005,0.00023 -0.00185,0.00556 -0.00195,0.00586c0.00127,-0.00646 -0.00095,-0.0008 0,-0.00586z"></path>
-      </svg>
-    </div>
-    <div id="subService10Lang"></div>
-    <div id="subService11Lang"></div>
     <div class="transparent-text">- - - - - - - - - - - - - - - - - - - -</div>
     <div class="transparent-text" id="subText0Lang">...</div>
     <div class="transparent-text">- - - - - - - - - - - - - - - - - - - -</div>
@@ -459,47 +325,36 @@
     <div class="scroll-bar" id="scrollBar"></div>
   </div>
 <!---------- SCRIPTS & FUNCTIONS ---------->
-  <script src="index_data/scripts/scripts.js"></script>
- <!-- Languages System -->
-  <script src="index_data/scripts/languages.js"></script>
-  <script src="index_data/scripts/language_english.js"></script>
-  <script src="index_data/scripts/language_hebrew.js"></script>
-  <script src="index_data/scripts/language_russian.js"></script>
- <!-- Languages System !-->
-  <script src="index_data/scripts/scripts_continue.js"></script>
-<script>
-  window.onload = function() {
-    moVe();
-    detectBrowser();
-    removeLocalSticky();
-    nextToa();
-    checkCookies();
-    checkConnection();
-    visitInformation();
-    checkFuncCeck();
-    killAnimation();
-    displayAutoModal();
-    langCheck();
-    firstLanguage();
-    loadTheme();
-  };
-  window.ononline = function() {
-    checkConnection();
-  };
-  window.onoffline = function() {
-    checkConnection();
-  };
-  window.oncontextmenu = function() {
-    return false;
-  };
-  window.onscroll = function() {
-    headerFunction();
-    scrollIndicator();
-  };
-</script>
+  <script src="index_data/scripts/loading_system.js"></script>
 <script>
   if(navigator.serviceWorker) {
-    navigator.serviceWorker.register('/StoragePlayer/sw.js',{scope: '/StoragePlayer/'})
+    if(window.location.protocol === 'https:') {
+      navigator.serviceWorker.register('/StoragePlayer/sw.js',{scope: '/StoragePlayer/'})
+      .then(registration => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch(error => {
+        return false
+      });
+      document.getElementById("manifestTestLoad").setAttribute('href','/StoragePlayer/manifest.webmanifest');
+    }else
+    if (window.location.protocol === 'file:') {
+      // Potentially register service worker for local file access (USE WITH CAUTION)
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js', { scope: '/' }) // Scope might need adjustment
+          .then(registration => {
+            console.log('Service Worker registered for local file with scope:', registration.scope);
+          })
+          .catch(error => {
+            return false
+          });
+          document.getElementById("manifestTestLoad").setAttribute('href','./manifest.webmanifest');
+      } else {
+        console.log('Service workers are not supported in this environment.');
+      }
+    } else {
+      console.log('Service workers are not being registered on non-HTTPS or non-file protocols.');
+    }
   }
 </script>
 </body>

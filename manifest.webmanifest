@@ -5,11 +5,21 @@
   "scope": "/StoragePlayer/",
   "start_url": "/StoragePlayer/",
   "display": "fullscreen",
+  "lang": "en",
   "icons": [
     {
       "src": "/StoragePlayer/index_data/textures/icon_dark.png",
       "type": "image/png",
       "sizes": "512x512"
     }
-  ]
+  ],
+  "locales": ["en","ru","he"],
+  "ru": {
+    "name": "Змея Меха Сборщик",
+    "short_name": "Змея Меха Сборщик"
+  },
+  "he": {
+    "name": "נגן רכסון",
+    "short_name": "נגן רכסון"
+  }
 }
