@@ -5,27 +5,18 @@ function themeSystemChangesHoyolab() {
   root.addEventListener('load', function() {
     document.getElementById('loadBar').style.width = widthcont++ + "px";
     document.getElementById("loadNumber").innerHTML = widthcont;
-    if(localStorage.getItem("lang") === "en") {
-      document.getElementById("errorLogs").innerHTML += "Loaded " + errorscont + " styles, not found or removed...";
-    }else
-    if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("errorLogs").innerHTML += "Загрузинно " + errorscont + " стайли, они не найдены или удалены...";
-    }else
-    if(localStorage.getItem("lang") === "he") {
-      document.getElementById("errorLogs").innerHTML += " ניטענו" + errorscont + " סטיילים, לא נמצאו או נמחקו...";
-    }
     toDisplayNone();
   });
   root.addEventListener("error", function() {
     errorscont++;
     if(localStorage.getItem("lang") === "en") {
-      document.getElementById("errorLogs").innerHTML += "Cant load " + errorscont + " styles, not found or removed...";
+      document.getElementById("errorLogs").innerHTML += "Cant load " + errorscont + " styles, not found or removed..." + "<br>";
     }else
     if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("errorLogs").innerHTML += "Невозможно загрузить " + errorscont + " стайли, они не найдены или удалены...";
+      document.getElementById("errorLogs").innerHTML += "Невозможно загрузить " + errorscont + " стайли, они не найдены или удалены..." + "<br>";
     }else
     if(localStorage.getItem("lang") === "he") {
-      document.getElementById("errorLogs").innerHTML += "אין אפשרות לטעון" + errorscont + " סטיילים, לא נמצאו או נמחקו...";
+      document.getElementById("errorLogs").innerHTML += "אין אפשרות לטעון" + errorscont + " סטיילים, לא נמצאו או נמחקו..." + "<br>";
     }
   });
   var styles = document.getElementById("stylesHendler");
@@ -33,27 +24,18 @@ function themeSystemChangesHoyolab() {
   styles.addEventListener('load', function() {
     document.getElementById('loadBar').style.width = widthcont++ + "px";
     document.getElementById("loadNumber").innerHTML = widthcont;
-    if(localStorage.getItem("lang") === "en") {
-      document.getElementById("errorLogs").innerHTML += "Loaded " + errorscont + " styles, not found or removed...";
-    }else
-    if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("errorLogs").innerHTML += "Загрузинно " + errorscont + " стайли, они не найдены или удалены...";
-    }else
-    if(localStorage.getItem("lang") === "he") {
-      document.getElementById("errorLogs").innerHTML += " ניטענו" + errorscont + " סטיילים, לא נמצאו או נמחקו...";
-    }
     toDisplayNone();
   });
   styles.addEventListener("error", function() {
     errorscont++;
     if(localStorage.getItem("lang") === "en") {
-      document.getElementById("errorLogs").innerHTML += "Cant load " + errorscont + " styles, not found or removed...";
+      document.getElementById("errorLogs").innerHTML += "Cant load " + errorscont + " styles, not found or removed..." + "<br>";
     }else
     if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("errorLogs").innerHTML += "Невозможно загрузить " + errorscont + " стайли, они не найдены или удалены...";
+      document.getElementById("errorLogs").innerHTML += "Невозможно загрузить " + errorscont + " стайли, они не найдены или удалены..." + "<br>";
     }else
     if(localStorage.getItem("lang") === "he") {
-      document.getElementById("errorLogs").innerHTML += "אין אפשרות לטעון" + errorscont + " סטיילים, לא נמצאו או נמחקו...";
+      document.getElementById("errorLogs").innerHTML += "אין אפשרות לטעון" + errorscont + " סטיילים, לא נמצאו או נמחקו..." + "<br>";
     }
   });
   var styles500 = document.getElementById("stylesHendler500");
@@ -61,27 +43,18 @@ function themeSystemChangesHoyolab() {
   styles500.addEventListener('load', function() {
     document.getElementById('loadBar').style.width = widthcont++ + "px";
     document.getElementById("loadNumber").innerHTML = widthcont;
-    if(localStorage.getItem("lang") === "en") {
-      document.getElementById("errorLogs").innerHTML += "Loaded " + errorscont + " styles, not found or removed...";
-    }else
-    if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("errorLogs").innerHTML += "Загрузинно " + errorscont + " стайли, они не найдены или удалены...";
-    }else
-    if(localStorage.getItem("lang") === "he") {
-      document.getElementById("errorLogs").innerHTML += " ניטענו" + errorscont + " סטיילים, לא נמצאו או נמחקו...";
-    }
     toDisplayNone();
   });
   styles500.addEventListener("error", function() {
     errorscont++;
     if(localStorage.getItem("lang") === "en") {
-      document.getElementById("errorLogs").innerHTML += "Cant load " + errorscont + " styles, not found or removed...";
+      document.getElementById("errorLogs").innerHTML += "Cant load " + errorscont + " styles, not found or removed..." + "<br>";
     }else
     if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("errorLogs").innerHTML += "Невозможно загрузить " + errorscont + " стайли, они не найдены или удалены...";
+      document.getElementById("errorLogs").innerHTML += "Невозможно загрузить " + errorscont + " стайли, они не найдены или удалены..." + "<br>";
     }else
     if(localStorage.getItem("lang") === "he") {
-      document.getElementById("errorLogs").innerHTML += "אין אפשרות לטעון" + errorscont + " סטיילים, לא נמצאו או נמחקו...";
+      document.getElementById("errorLogs").innerHTML += "אין אפשרות לטעון" + errorscont + " סטיילים, לא נמצאו או נמחקו..." + "<br>";
     }
   });
   var animations = document.getElementById("animationsHendler");
@@ -89,27 +62,18 @@ function themeSystemChangesHoyolab() {
   animations.addEventListener('load', function() {
     document.getElementById('loadBar').style.width = widthcont++ + "px";
     document.getElementById("loadNumber").innerHTML = widthcont;
-    if(localStorage.getItem("lang") === "en") {
-      document.getElementById("errorLogs").innerHTML += "Loaded " + errorscont + " styles, not found or removed...";
-    }else
-    if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("errorLogs").innerHTML += "Загрузинно " + errorscont + " стайли, они не найдены или удалены...";
-    }else
-    if(localStorage.getItem("lang") === "he") {
-      document.getElementById("errorLogs").innerHTML += " ניטענו" + errorscont + " סטיילים, לא נמצאו או נמחקו...";
-    }
     toDisplayNone();
   });
   animations.addEventListener("error", function() {
     errorscont++;
     if(localStorage.getItem("lang") === "en") {
-      document.getElementById("errorLogs").innerHTML += "Cant load " + errorscont + " styles, not found or removed...";
+      document.getElementById("errorLogs").innerHTML += "Cant load " + errorscont + " styles, not found or removed..." + "<br>";
     }else
     if(localStorage.getItem("lang") === "ru") {
-      document.getElementById("errorLogs").innerHTML += "Невозможно загрузить " + errorscont + " стайли, они не найдены или удалены...";
+      document.getElementById("errorLogs").innerHTML += "Невозможно загрузить " + errorscont + " стайли, они не найдены или удалены..." + "<br>";
     }else
     if(localStorage.getItem("lang") === "he") {
-      document.getElementById("errorLogs").innerHTML += "אין אפשרות לטעון" + errorscont + " סטיילים, לא נמצאו או נמחקו...";
+      document.getElementById("errorLogs").innerHTML += "אין אפשרות לטעון" + errorscont + " סטיילים, לא נמצאו או נמחקו..." + "<br>";
     }
   });
   document.getElementById("themeSelected").innerHTML = "HoYoLab Theme";
