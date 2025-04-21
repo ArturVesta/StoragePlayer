@@ -1,6 +1,6 @@
 var GHPATH = '/StoragePlayer';
 var APP_PREFIX = 'gppwa_';
-var VERSION = '5.3.8-final';
+var VERSION = '5.3.9-final';
 var URLS = [
   `${GHPATH}/`,
 
